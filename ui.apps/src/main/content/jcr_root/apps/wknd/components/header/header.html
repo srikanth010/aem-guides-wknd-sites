@@ -1,0 +1,33 @@
+<div data-sly-use.model="com.adobe.aem.guides.wknd.core.models.header.Header">
+    <ul> White Logo : ${model.whiteLogo}
+        <li>Logo Link : ${model.logoLink}</li>
+        <li>Logo Link Title : ${model.logoLinkTitle}</li>
+        <li>Logo Link New tab : ${model.logoLinkNewTab}</li>
+        <li>LogIn Text : ${model.logInText}</li>
+        <li>LogIn Link : ${model.logInlink}</li>
+        <li>LogIn New Tab : ${model.logInNewTab}</li>
+        <li>LogIn New Title : ${model.logInlinkTitle}</li>
+        <li>SignUp Text : ${model.signUpText}</li>
+        <li>SignUp Link : ${model.signUpLink}</li>
+        <li>SignUp New Tab : ${model.signUpNewTab}</li>
+        <li>SignUp New Title : ${model.signUplinkTitle}</li>
+    </ul>
+    <ul data-sly-list.headerMenu="${model.headerLinks}">
+        <li>Nav Text : ${headerMenu.navText}</li>
+        <li> Nav Link : ${headerMenu.navLink}</li>
+        <li>Nav New Tab : ${headerMenu.navNewTab}</li>
+        <li> Nav Title : ${headerMenu.navLinkTitle}</li>
+        <li> Nav Link Description : ${headerMenu.navLinkDescription}</li>
+        <ul data-sly-list.headerItemList="${headerMenu.subMenus}">
+            <li>Nav Sub Menu Image : ${headerItemList.navSubMenuImage}</li>
+            <li>Nav Sub Menu Image Alt : ${headerItemList.navSubMenuImageAlt}</li>
+        </ul>
+    </ul>
+</div>
+
+</div>
+</div>
+
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.all @ categories='header.menu'}"/>
